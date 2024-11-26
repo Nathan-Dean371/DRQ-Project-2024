@@ -4,7 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 function Welcome()
 {
     return( 
-        <Container data-bs-theme="dark">
+        <Container  data-bs-theme="dark" className="my-5">
             <h1>Welcome to DRQ-MERN-ND</h1>
             <p>
                 This is a simple MERN stack application with a React frontend and an Express backend.
