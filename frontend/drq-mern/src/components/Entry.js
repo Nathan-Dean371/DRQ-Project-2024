@@ -29,7 +29,7 @@ function Entry()
 
 
     return(
-        <Container className="w-25 ">
+        <Container className="w-50 ">
             <h1>Entry page</h1>
             <p>
                 Enter the details of the person you want to add to the database.
