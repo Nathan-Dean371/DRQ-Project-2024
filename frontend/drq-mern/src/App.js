@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import NavigationBar from './components/NavigationBar';
 import Welcome from './components/Welcome';
-import Page1 from './components/Page1';
-import Page2 from './components/Page2';
+import Page1 from './components/Entry';
+import Page2 from './components/Retrieval';
 
 function App() {
   return (

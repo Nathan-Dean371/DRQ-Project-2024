@@ -11,8 +11,8 @@ function NavigationBar() {
         <Navbar.Brand href="/">DRQ-MERN-ND</Navbar.Brand>
             <Nav className="me-auto">
                 <Nav.Link as={Link} to="/">Home</Nav.Link>
-                <Nav.Link as={Link} to="/page1">Page1</Nav.Link>
-                <Nav.Link as={Link} to="/page2">Page2</Nav.Link>
+                <Nav.Link as={Link} to="/page1">Person Entry</Nav.Link>
+                <Nav.Link as={Link} to="/page2">Entry Retrieval</Nav.Link>
             </Nav>
         
       </Container>
