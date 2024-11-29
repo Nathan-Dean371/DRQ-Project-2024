@@ -5,6 +5,19 @@ require('dotenv').config()
 const mongoose = require('mongoose')
 const port = 4000
 DATABASE_URL = process.env.DATABASE_URL
+const cors = require('cors')
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use(cors());
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 
 app.get('/', (req, res) => {
   
@@ -28,3 +41,27 @@ async function ConnectToDB()
     console.log(err);
   } 
 }
+
+//Define the schema
+const newPerson = new mongoose.Schema({
+  name: String,
+  occupation: String,
+  dob: Date
+});
+
+//Define the model
+const Person = mongoose.model('Person', newPerson);
+
+app.post('/new-entry', async (req, res) => 
+{
+  
+  const name = req.body.Fullname;
+  const occupation = req.body.Occupation;
+  const dob = req.body.Dob;
+  //Create a new entry
+  var newPerson = new Person({name, occupation, dob});
+  console.log(newPerson);
+  await newPerson.save();
+
+  res.status(201).json({ message: "Person", person : newPerson });
+})

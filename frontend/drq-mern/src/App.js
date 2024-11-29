@@ -17,10 +17,6 @@ function App() {
           <Route path="/page2" element={<Page2/>}/>
         </Routes>
       </Router>
-      
-      
-      
-      
     </div>
   );
 }
