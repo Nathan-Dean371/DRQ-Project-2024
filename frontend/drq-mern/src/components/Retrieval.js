@@ -20,25 +20,35 @@ function Retrieval()
         console.log("Retrieve button clicked");
     }
 
-    
-
     return(
         <Container className="my-5 w-75">
             <h1>Page 2</h1>
             <p>This page will display data stored in the DB</p>
 
-            <table className="retrivelDisplayTable w-100">
-                <EntryTableRow
-                    entries={entryArray}
-                />
-            </table>
             
-
+            <EntryTableRow
+            entries={entryArray}
+            onChangeEntries={handdleChangeEntries}
+            />
             <button onClick={handleRetrieve}>
                 Retrieve
             </button>
         </Container>
     );
+
+    function handdleChangeEntries(nextEntry)
+{
+    setEntryArray(entryArray.map(e => {
+        if(this.id === nextEntry.id)
+        {
+            return nextEntry;
+        } else {
+            return e;
+        }
+    }));
 }
+}
+
+
 
 export default Retrieval;

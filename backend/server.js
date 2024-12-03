@@ -72,3 +72,4 @@ app.get('/retrieve', async (req, res) =>
   const data = await Person.find();
   res.status(200).json(data);
 })
+
