@@ -22,8 +22,12 @@ function Entry()
             Dob: dob
         }).then((response) => {
             console.log(response);
+            //Show success message
+            alert("Data added successfully");
         }).catch((err) => {
             console.log(err);
+            //Show error message
+            alert("Error adding data");
         });
     }
 

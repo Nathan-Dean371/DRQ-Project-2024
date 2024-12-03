@@ -58,6 +58,7 @@ app.post('/new-entry', async (req, res) =>
   const name = req.body.Fullname;
   const occupation = req.body.Occupation;
   const dob = req.body.Dob;
+  
   //Create a new entry
   var newPerson = new Person({name, occupation, dob});
   console.log(newPerson);
