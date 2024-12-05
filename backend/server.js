@@ -73,3 +73,20 @@ app.get('/retrieve', async (req, res) =>
   res.status(200).json(data);
 })
 
+//Route to update a document
+app.put('/update', async (req, res) =>
+{
+  console.log(req.body);
+
+  const id = req.body.id;
+  const name = req.body.name;
+  const occupation = req.body.occupation;
+  const dob = req.body.dob;
+
+
+  const updatedPerson = await Person.findByIdAndUpdate(id, {name, occupation, dob}, {new: true});
+
+  console.log(updatedPerson);
+
+  res.status(200).json(updatedPerson);
+})

@@ -2,7 +2,7 @@ import Container from "react-bootstrap/esm/Container";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
-import EntryTableRow from "./EntryTableRow";
+import EntryTable from "./EntryTable";
 import { useState } from "react";
 
 function Retrieval()
@@ -20,15 +20,21 @@ function Retrieval()
         console.log("Retrieve button clicked");
     }
 
+    function arrayChanged()
+    {
+        handleRetrieve();
+    }
+
     return(
         <Container className="my-5 w-75">
             <h1>Page 2</h1>
             <p>This page will display data stored in the DB</p>
 
             
-            <EntryTableRow
-            entries={entryArray}
-            onChangeEntries={handdleChangeEntries}
+            <EntryTable
+                entries={entryArray}
+                onChange={arrayChanged}
+            
             />
             <button onClick={handleRetrieve}>
                 Retrieve
@@ -36,17 +42,6 @@ function Retrieval()
         </Container>
     );
 
-    function handdleChangeEntries(nextEntry)
-{
-    setEntryArray(entryArray.map(e => {
-        if(this.id === nextEntry.id)
-        {
-            return nextEntry;
-        } else {
-            return e;
-        }
-    }));
-}
 }
 
 
