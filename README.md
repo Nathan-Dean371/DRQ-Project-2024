@@ -60,5 +60,5 @@ Start the fronend
 
 Navigate to the app
 ```bash
-    Goto [http://localhost:3000/](http://localhost:3000/)
+    Goto [http://localhost:3000/](http://localhost:3000/ "Local host")
 ```
