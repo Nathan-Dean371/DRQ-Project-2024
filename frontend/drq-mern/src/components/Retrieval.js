@@ -27,15 +27,14 @@ function Retrieval()
 
     return(
         <Container className="my-5 w-75">
-            <h1>Page 2</h1>
-            <p>This page will display data stored in the DB</p>
+            <h1>Document display</h1>
+            <p>This page allows you view & edit or update database entries.</p>
 
-            
             <EntryTable
                 entries={entryArray}
                 onChange={arrayChanged}
-            
             />
+
             <button onClick={handleRetrieve}>
                 Retrieve
             </button>
