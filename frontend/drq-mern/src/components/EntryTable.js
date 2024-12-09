@@ -14,6 +14,11 @@ export default function EntryTable(
     }) {
         return(
             <table className="w-100">
+                <thead> 
+                <th>Name</th>
+                <th>Occupation</th>
+                <th>D.O.B</th>
+                </thead>
                 <tbody>
 
                 {/* Dynamically add an entryItem for each entry in the array */}
@@ -63,10 +68,7 @@ function EntryItem({entry, onChange})
         }).then((response) => {
             console.log(response);
             alert("Data deleted successfully");
-
-            
             onChange();
-
         }).catch((err) => {
             console.log(err);
             alert("Error deleting data");

@@ -10,6 +10,7 @@ function NavigationBar() {
       <Container>
         <Navbar.Brand href="/">DRQ-MERN-ND</Navbar.Brand>
             <Nav className="me-auto">
+              {/* Using Nav.link as Link allows me to change pages without the page reloading */}
                 <Nav.Link as={Link} to="/">Home</Nav.Link>
                 <Nav.Link as={Link} to="/page1">Person Entry</Nav.Link>
                 <Nav.Link as={Link} to="/page2">Entry Retrieval</Nav.Link>
