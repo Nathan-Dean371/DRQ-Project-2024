@@ -16,7 +16,7 @@ export default function EntryTable(
             <table className="w-100">
                 <tbody>
 
-                //Dynamically add an entryItem for each entry in the array
+                {/* Dynamically add an entryItem for each entry in the array */}
                 {entries.map(entry => 
                 (   
                     
