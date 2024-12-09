@@ -1,0 +1,17 @@
+{
+  "name": "drq-project-2024",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": 
+  {
+    {
+      "install:backend": "cd backend && npm install",
+      "install:frontend": "cd frontend/drq-mern && npm install",
+        
+      "postinstall": "run-p install:*"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
